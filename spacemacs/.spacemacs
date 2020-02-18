@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(go
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -42,6 +42,9 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      emacs-lisp
      ;; git
+     (go :variables
+         go-format-before-save t
+         gofmt-command "goimports")
      helm
      lsp
      ;; markdown
